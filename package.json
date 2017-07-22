@@ -1,0 +1,11 @@
+{
+  "name": "homework08",
+  "version": "1.0.0",
+  "description": "\"ecmascript2015 to typescript\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tovmach Alexandr",
+  "license": "ISC"
+}
