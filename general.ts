@@ -28,7 +28,7 @@ class ImprovedFighter extends Fighter {
         this.hit(enemy, point * 2)
 	}
 }
-function fight(fighter: IFighter, improvedFighter: IFighter, ...point): void {
+function fight(fighter: IFighter, improvedFighter: IFighter, ...point: number[]): void {
 	point = (!!point[0].forEach)? point[0]: point;
 	if (i >= point.length) { i = 0 };
 	if (!((fighter.health > 0) && (improvedFighter.health > 0))) {
