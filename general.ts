@@ -1,6 +1,5 @@
 interface IFighter {
     name: string;
-    power: number;
     health: number; 
     setDamage(damage: number);
     hit(enemy, point: number);
@@ -8,7 +7,7 @@ interface IFighter {
 
 class Fighter implements IFighter {
     name: string;
-    power: number;
+    protected power: number;
     health: number;
 	constructor(name, power = 5, health = 100) {
 		this.name = name;
@@ -43,7 +42,7 @@ function fight(fighter: IFighter, improvedFighter: IFighter, ...point: number[])
 	if (round % 2 == 0) {
 		fighter.hit(improvedFighter, point[i]);
 	} else {
-		improvedFighter.hit(fighter, point[i]);
+		improvedFighter.doubleHit(fighter, point[i]);
 	}
 	
 	i++;
