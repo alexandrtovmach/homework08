@@ -3,6 +3,7 @@ interface IFighter {
     health: number; 
     setDamage(damage: number);
     hit(enemy, point: number);
+    doubleHit?(enemy, point: number);
 }
 
 class Fighter implements IFighter {
@@ -23,7 +24,7 @@ class Fighter implements IFighter {
 };
 
 class ImprovedFighter extends Fighter {
-	doubleHit(enemy, point: number) {
+	doubleHit(enemy: IFighter, point: number) {
         this.hit(enemy, point * 2)
 	}
 }
